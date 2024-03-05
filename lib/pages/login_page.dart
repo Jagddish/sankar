@@ -21,6 +21,7 @@ class _LoginPageState extends State<LoginPage> {
       height: height * 0.04,
     );
     return Container(
+      color: Colors.white,
       child: Form(
         key: _formKey,
         child: Padding(
@@ -28,10 +29,13 @@ class _LoginPageState extends State<LoginPage> {
               top: 100.0, left: 40.0, right: 40.0, bottom: 20.0),
           child: Expanded(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(
-                  Icons.person,
-                  size: 100.0,
+                Center(
+                  child: Icon(
+                    Icons.person,
+                    size: 100.0,
+                  ),
                 ),
                 space,
                 Container(
@@ -89,47 +93,52 @@ class _LoginPageState extends State<LoginPage> {
                     // },
                   ),
                 ),
-                SizedBox(height: height*0.05,),
+                TextButton(onPressed: () {}, child: Text('Forget passowrd?')),
+                SizedBox(height: height*0.03,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
 
                   children: [
 
-                    TextButton(
-                      style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.purpleAccent)),
+                    Container(
+                      height: 50.0,
+                      width:130.0,
+                      child: TextButton(
+                        style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.purpleAccent)),
 
 
-                      onPressed: () {
-                        // if (_formKey.currentState!.validate()) {
-                        //   Navigator.push(
-                        //       context,
-                        //       MaterialPageRoute(
-                        //         builder: (context) => HomePage(),
-                        //       ));
-                        // }
-                        Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomePage(),
-                                  ));
-                      },
-                      child: Container(
-                        padding: EdgeInsets.all(15.0),
-                          child: Text('Login',style: TextStyle(color: Colors.white),)),
+                        onPressed: () {
+                          // if (_formKey.currentState!.validate()) {
+                          //   Navigator.push(
+                          //       context,
+                          //       MaterialPageRoute(
+                          //         builder: (context) => HomePage(),
+                          //       ));
+                          // }
+                          Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => HomePage(),
+                                    ));
+                        },
+                        child: Text('Login',style: TextStyle(color: Colors.white),),
+                      ),
                     ),
                     SizedBox(width: 30.0),
-                    TextButton(
-                      style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.purpleAccent)),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SignUpPage(),
-                            ));
-                      },
-                      child: Container(
-                        padding: EdgeInsets.all(15.0),
-                        child: Text('Sign Up',style: TextStyle(color: Colors.white),),),
+                    Container(
+                      height: 50.0,
+                      width:130.0,
+                      child: TextButton(
+                        style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.purpleAccent)),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SignUpPage(),
+                              ));
+                        },
+                        child: Text('Sign Up',style: TextStyle(color: Colors.white),),
+                      ),
                     )
                   ],
                 )
