@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sankar/pages/animated_login.dart';
 import 'package:sankar/pages/formfield.dart';
 import 'package:sankar/pages/home_page.dart';
 import 'package:sankar/pages/login_page.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: LoginPage(),),
+        body: AnimeLogin()),
     );
   }
 }

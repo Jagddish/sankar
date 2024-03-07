@@ -80,47 +80,45 @@ class HomePage extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           children: [
-            Expanded(
-              child: Container(
-                color: Colors.purple.shade800,
-                height: height * 0.28, //container size
-                padding: EdgeInsets.only(
-                  top: height * 0.04,
-                  left: height * 0.04,
-                ),
-                child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage('images/dp.jpg'),
-                      radius: height * 0.05,
+            Container(
+              color: Colors.purple.shade800,
+              height: height * 0.28, //container size
+              padding: EdgeInsets.only(
+                top: height * 0.04,
+                left: height * 0.04,
+              ),
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('images/dp.jpg'),
+                    radius: height * 0.05,
+                  ),
+                  SizedBox(
+                    height: height * 0.04,
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(bottom: height * 0.02),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Flutter Developer',
+                          style: TextStyle(color: Colors.white, fontSize: 20.0,),
+                        ),
+                        SizedBox(
+                          height: height * 0.01,
+                        ),
+                        Text(
+                          'flutter@developer.com',
+                          style: TextStyle(color: Colors.white,fontSize: 20.0),
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: height * 0.04,
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(bottom: height * 0.02),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Shankar Ankepaka',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          SizedBox(
-                            height: height * 0.01,
-                          ),
-                          Text(
-                            'Shankar@gmail.com',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ],
-                      ),
-                      // SizedBox(height: height*0.02,),
-                    )
-                  ],
-                ),
+                    // SizedBox(height: height*0.02,),
+                  )
+                ],
               ),
             ),
             Container(
